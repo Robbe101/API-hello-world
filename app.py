@@ -6,15 +6,22 @@ import json
 app = Flask(__name__)
 api = Api(app)
 
+
 #Make class inherited from Resource 
 class Algorithm(Resource):
+
+    data = pd.read_excel("data.xlsx")
+    dt = data.to_json()
+    print(dt)
+    data2 = dt.
 
     #Read data for server
     def get(self):
             return {"Data" : "Hello World"}
     
     #Add new data to server
-    def post(self):
+    def post(self, data):
+            df = data.read
             return {"Data" : "Data posted"}
     
     #Change data on server
@@ -29,4 +36,5 @@ class Algorithm(Resource):
 api.add_resource(Algorithm, "/")
 
 if __name__ == "__main__":
+    #put arg host = "IP" to change access IP
     app.run(debug=True)

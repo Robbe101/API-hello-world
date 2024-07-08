@@ -7,5 +7,8 @@ Ideally you build your API RESTfull. This helps with scaling and optimizes clien
 An API usually works with HTTP communication, we are going to use the Flask module in python for implementing this.
 
 # Requirements
+To install al needed modules use the following commad
 
-
+```commandline
+pip install -r requirements.txt
+```
